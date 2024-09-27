@@ -1,0 +1,232 @@
+<section class="travel-agencies-banner-section">
+  <div class="breadcrumb-section" data-aos="fade-down" data-aos-offset="600">
+    Home > Packages
+  </div>
+  <div class="content-desc" data-aos="fade-down" data-aos-offset="600">
+    <div>
+      <div class="heading">
+        Explore all things to do.
+      </div>
+
+    </div>
+    <div class="sort-by-div">
+      Sort by: <select>
+        <option>Featured</option>
+        <option>Latest</option>
+        <option>Oldest</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="outer-layout-div">
+    <div class="sidebar-div" data-aos="fade-in">
+      <div class="when-travel-header">
+        <div class="text">
+          When are you traveling?
+        </div>
+        <div class="date-range-div">
+          <mat-form-field>
+            <mat-label>Check Available Dates</mat-label>
+            <mat-date-range-input [rangePicker]="picker">
+              <input matStartDate placeholder="Start date">
+              <input matEndDate placeholder="End date">
+            </mat-date-range-input>
+            <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-date-range-picker #picker></mat-date-range-picker>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="content-div">
+        <div class="heading-div">
+          Tour Type
+        </div>
+        <div class="tour-type-checkbox-outer">
+          <div *ngFor="let checkbox of tourtypes; let i = index" class="checkbox-inner">
+            <input type="checkbox" [(ngModel)]="checkbox.checked" [id]="'checkbox' + i" />
+            <label [for]="'checkbox' + i" [ngClass]="{'checked-label': checkbox.checked}">{{ checkbox.label }}</label>
+          </div>
+        </div>
+        <hr />
+
+        <div class="heading-div">
+          Travel Agency
+        </div>
+        <div class="tour-type-checkbox-outer">
+          <div *ngFor="let agency of travelAgencies; let m = index" class="checkbox-inner">
+            <input type="radio" [(ngModel)]="selectedAgency" [value]="agency.value" [id]="'agency' + m"
+              name="agencies" />
+            <label [for]="'agency' + m" [ngClass]="{'checked-label': selectedAgency === agency.value}">
+              {{ agency.label }}
+            </label>
+          </div>
+
+        </div>
+        <hr />
+
+        <div class="heading-div">
+          Filter Price
+        </div>
+        <div class="tour-type-checkbox-outer">
+          <div *ngFor="let price of prices; let l = index" class="checkbox-inner">
+            <input type="radio" [(ngModel)]="selectedPrice" [value]="price.value" [id]="'price' + l" name="prices" />
+            <label [for]="'price' + l" [ngClass]="{'checked-label': selectedPrice === price.value}">
+              {{ price.label }}
+            </label>
+          </div>
+
+        </div>
+        <hr />
+
+        <div class="heading-div">
+          Duration
+        </div>
+        <div class="tour-type-checkbox-outer">
+          <div *ngFor="let duration of durations; let n = index" class="checkbox-inner">
+            <input type="radio" [(ngModel)]="selectedDuration" [value]="duration.value" [id]="'duration' + n"
+              name="durations" />
+            <label [for]="'duration' + n" [ngClass]="{'checked-label': selectedDuration === duration.value}">
+              {{ duration.label }}
+            </label>
+          </div>
+
+        </div>
+        <hr />
+
+
+        <div class="heading-div">
+          Language Spoken
+        </div>
+        <div class="tour-type-checkbox-outer">
+          <div *ngFor="let language of languages; let j = index" class="checkbox-inner">
+            <input type="checkbox" [(ngModel)]="language.checked" [id]="'language' + j" />
+            <label [for]="'language' + j" [ngClass]="{'checked-label': language.checked}">{{ language.label }}</label>
+          </div>
+        </div>
+        <hr />
+        <div class="heading-div">
+          Rating
+        </div>
+        <div class="tour-type-checkbox-outer">
+          <div *ngFor="let rating of ratings; let k = index"
+            class="checkbox-inner d-flex align-content-center justify-content-between">
+            <div class="d-flex align-content-center gap-2">
+              <input type="checkbox" [(ngModel)]="rating.checked" [id]="'rating' + k" />
+              <label [for]="'rating' + k" [ngClass]="{'checked-label': rating.checked}">
+                <img [src]="rating.imgSrc" alt="Rating Image">
+
+              </label>
+            </div>
+            <div>
+              <label>({{ rating.count }})</label>
+            </div>
+          </div>
+        </div>
+        <hr />
+
+        <div class="heading-div">
+          Specials
+        </div>
+        <div class="tour-type-checkbox-outer">
+
+          <div *ngFor="let discount of discounts; let o = index" class="checkbox-inner">
+            <input type="radio" [(ngModel)]="selectedDiscount" [value]="discount.value" [id]="'discount' + o"
+              name="discounts" />
+            <label [for]="'discount' + o" [ngClass]="{'checked-label': selectedDiscount === discount.value}">
+              {{ discount.label }}
+            </label>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="main-content-div" data-aos="fade-in">
+      <div class="outer-card-div">
+        <div class="agency-card">
+          <img src="../../assets/images/Link.png" />
+          <div class="content-div">
+            <div class="heading">Travel Agency 1 </div>
+            <div class="text">100+ Packages </div>
+          </div>
+        </div>
+        <div class="agency-card">
+          <img src="../../assets/images/Link (1).png" />
+          <div class="content-div">
+            <div class="heading">Travel Agency 1 </div>
+            <div class="text">100+ Packages </div>
+          </div>
+        </div>
+        <div class="agency-card">
+          <img src="../../assets/images/Link (2).png" />
+          <div class="content-div">
+            <div class="heading">Travel Agency 1 </div>
+            <div class="text">100+ Packages </div>
+          </div>
+        </div>
+        <div class="agency-card">
+          <img src="../../assets/images/Link (3).png" />
+          <div class="content-div">
+            <div class="heading">Travel Agency 1 </div>
+            <div class="text">100+ Packages </div>
+          </div>
+        </div>
+        <div class="agency-card">
+          <img src="../../assets/images/Link (4).png" />
+          <div class="content-div">
+            <div class="heading">Travel Agency 1 </div>
+            <div class="text">100+ Packages </div>
+          </div>
+        </div>
+        <div class="agency-card">
+          <img src="../../assets/images/Link (5).png" />
+          <div class="content-div">
+            <div class="heading">Travel Agency 1 </div>
+            <div class="text">100+ Packages </div>
+          </div>
+        </div>
+        <div class="agency-card">
+          <img src="../../assets/images/Link (6).png" />
+          <div class="content-div">
+            <div class="heading">Travel Agency 1 </div>
+            <div class="text">100+ Packages </div>
+          </div>
+        </div>
+        <div class="agency-card">
+          <img src="../../assets/images/Link (7).png" />
+          <div class="content-div">
+            <div class="heading">Travel Agency 1 </div>
+            <div class="text">100+ Packages </div>
+          </div>
+        </div>
+        <div class="agency-card">
+          <img src="../../assets/images/Link (8).png" />
+          <div class="content-div">
+            <div class="heading">Travel Agency 1 </div>
+            <div class="text">100+ Packages </div>
+          </div>
+        </div>
+        <div class="agency-card">
+          <img src="../../assets/images/Link (9).png" />
+          <div class="content-div">
+            <div class="heading">Travel Agency 1 </div>
+            <div class="text">100+ Packages </div>
+          </div>
+        </div>
+        <div class="agency-card">
+          <img src="../../assets/images/Link (10).png" />
+          <div class="content-div">
+            <div class="heading">Travel Agency 1 </div>
+            <div class="text">100+ Packages </div>
+          </div>
+        </div>
+        <div class="agency-card">
+          <img src="../../assets/images/Link (11).png" />
+          <div class="content-div">
+            <div class="heading">Travel Agency 1 </div>
+            <div class="text">100+ Packages </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

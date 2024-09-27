@@ -1,0 +1,1269 @@
+<!-- Banner -->
+<section class="home-video-banner-section">
+  <div class="inner-video-banner">
+    <img src="../../assets/images/banner-home.png" alt="Background Image" class="background" data-aos="fade-down"
+      data-aos-duration="2000">
+    <button class="play-button" (click)="playVideo($event)">
+      <img src="../../assets/images/Play button.svg" alt="Play" data-aos="flip-up" data-aos-duration="2000">
+    </button>
+    <video #videoPlayer controls class="video-player">
+      <source src="path/to/your/video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <div class="book-now-outer-div" data-aos="zoom-in-up" data-aos-duration="3000">
+      <div class="outer-spec-div">
+        <div class="icon-div">
+          <img src="../../assets/images/location-round-filled.svg" />
+        </div>
+        <div class="content">
+          <div class="heading">
+            Location
+          </div>
+          <div class="input-div">
+            <input class="location-input" type="text" placeholder="Makkah">
+          </div>
+        </div>
+      </div>
+      <div class="outer-spec-div">
+        <div class="icon-div">
+          <img src="../../assets/images/location-round-filled.svg" />
+        </div>
+        <div class="content">
+          <div class="heading">
+            Date
+          </div>
+          <div class="input-div">
+            <input class="date-input" type="date" placeholder="August 23, 2024">
+          </div>
+        </div>
+      </div>
+      <div class="outer-spec-div">
+        <div class="icon-div">
+          <img src="../../assets/images/location-round-filled.svg" />
+        </div>
+        <div class="content">
+          <div class="heading">
+            Guests
+          </div>
+          <div class="input-div">
+            <select class="guest-select">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="outer-spec-div">
+        <button class="book-now-btn">
+          Book Now <img src="../../assets/images/forward-arrow-btn.svg" />
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Services -->
+<section class="service-section" data-aos="fade-up" data-aos-duration="2000">
+  <img class="section-bg" src="../../assets/images/BG Element.png" />
+  <div class="section-heading-div">
+    <div class="section-heading">
+      Our Services
+    </div>
+    <div class="section-text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Imperdiet tempus felis vitae sit est quisque.
+    </div>
+  </div>
+
+  <div class="outer-card-div">
+    <div class="service-card">
+      <div class="icon-div">
+        <img src="../../assets/images/headphones.svg" />
+      </div>
+      <div class="heading">
+        24/7 Support
+      </div>
+      <div class="text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="icon-div">
+        <img src="../../assets/images/headphones.svg" />
+      </div>
+      <div class="heading">
+        Travel Guide
+      </div>
+      <div class="text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="icon-div">
+        <img src="../../assets/images/image-rectangle.svg" />
+      </div>
+      <div class="heading">
+        Top Destination
+      </div>
+      <div class="text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="icon-div">
+        <img src="../../assets/images/book 01.svg" />
+      </div>
+      <div class="heading">
+        Easily Bookings
+      </div>
+      <div class="text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Explore Top Destination -->
+
+<section class="explore-destination-section" data-aos="fade-up" data-aos-duration="2000">
+
+  <div class="section-heading-div">
+    <div class="section-heading">
+      Explore Top Destination
+    </div>
+    <div class="section-text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Imperdiet tempus felis vitae sit est quisque.
+    </div>
+  </div>
+  <div class="outer-card-div">
+    <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="topDestinationSlider">
+      <div ngxSlickItem>
+        <div class="destination-card">
+          <div class="img-div">
+            <img src="../../assets/images/destination1.png" alt="">
+          </div>
+          <div class="heading">
+            Jabal Al Nour
+          </div>
+          <div class="text">
+            Starting at $200/per person
+          </div>
+          <div class="rating">
+            <div class="tag"><img src="../../assets/images/Star 2.svg" /> 5.0</div>(2.5k Review)
+          </div>
+        </div>
+      </div>
+      <div ngxSlickItem>
+        <div class="destination-card">
+          <div class="img-div">
+            <img src="../../assets/images/destination3.png" alt="">
+          </div>
+          <div class="heading">
+            Makkah Mall
+          </div>
+          <div class="text">
+            Starting at $200/per person
+          </div>
+          <div class="rating">
+            <div class="tag"><img src="../../assets/images/Star 2.svg" /> 5.0</div>(2.5k Review)
+          </div>
+        </div>
+      </div>
+      <div ngxSlickItem>
+        <div class="destination-card">
+          <div class="img-div">
+            <img src="../../assets/images/destination2.png" alt="">
+          </div>
+          <div class="heading">
+            Abraj Al Bait
+          </div>
+          <div class="text">
+            Starting at $200/per person
+          </div>
+          <div class="rating">
+            <div class="tag"><img src="../../assets/images/Star 2.svg" /> 5.0</div>(2.5k Review)
+          </div>
+        </div>
+      </div>
+      <div ngxSlickItem>
+        <div class="destination-card">
+          <div class="img-div">
+            <img src="../../assets/images/destination3.png" alt="">
+          </div>
+          <div class="heading">
+            Makkah Mall
+          </div>
+          <div class="text">
+            Starting at $200/per person
+          </div>
+          <div class="rating">
+            <div class="tag"><img src="../../assets/images/Star 2.svg" /> 5.0</div>(2.5k Review)
+          </div>
+        </div>
+      </div>
+    </ngx-slick-carousel>
+
+  </div>
+
+</section>
+
+<!-- Popular Things -->
+<section class="popular-things-section">
+  <div class="section-heading-div" data-aos="fade-up" data-aos-duration="2000">
+    <div class="section-heading">
+      Popular things to do
+    </div>
+    <div class="section-text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Imperdiet tempus felis vitae sit est quisque.
+    </div>
+  </div>
+
+  <div class="outer-card-div" data-aos="fade-up" data-aos-duration="2000">
+    <div class="popular-card">
+      <div class="icon-div">
+        <img src="../../assets/images/city-tour.svg" />
+      </div>
+      <div class="heading">
+        City Tours
+      </div>
+      <div class="text">
+        100+ Tours
+      </div>
+    </div>
+    <div class="popular-card">
+      <div class="icon-div">
+        <img src="../../assets/images/religion-tour.svg" />
+      </div>
+      <div class="heading">
+        Religious Tours
+      </div>
+      <div class="text">
+        100+ Tours
+      </div>
+    </div>
+    <div class="popular-card">
+      <div class="icon-div">
+        <img src="../../assets/images/day-cruises.svg" />
+      </div>
+      <div class="heading">
+        Day Cruises
+      </div>
+      <div class="text">
+        100+ Tours
+      </div>
+    </div>
+    <div class="popular-card">
+      <div class="icon-div">
+        <img src="../../assets/images/bus-tours.svg" />
+      </div>
+      <div class="heading">
+        Bus Tours
+      </div>
+      <div class="text">
+        100+ Tours
+      </div>
+    </div>
+    <div class="popular-card">
+      <div class="icon-div">
+        <img src="../../assets/images/food-tours.svg" />
+      </div>
+      <div class="heading">
+        Food Tours
+      </div>
+      <div class="text">
+        100+ Tours
+      </div>
+    </div>
+
+
+  </div>
+</section>
+
+<!-- Book now CTA -->
+<section class="book-now-section">
+  <div class="content" data-aos="fade-down" data-aos-duration="2000">
+    <div class="heading">
+      Lorem ipsum dolor sit amet consectetur.
+    </div>
+    <button>
+      Book Now
+    </button>
+  </div>
+</section>
+
+<!-- Top Deals -->
+<section class="top-deals-section" data-aos="fade-up" data-aos-duration="2000">
+  <div class="section-heading-div">
+    <div class="section-heading">
+      Top Deals
+    </div>
+    <div class="section-text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Imperdiet tempus felis vitae sit est quisque.
+    </div>
+  </div>
+
+  <div class="outer-card-div">
+    <div class="top-deal-card">
+      <div class="img-div">
+        <img src="../../assets/images/top-deals-card-img.png" />
+      </div>
+      <div class="discount-div">
+
+        UPTO
+        <span>75%</span>
+        OFF
+      </div>
+      <div class="content-div">
+        <div class="heading">
+          Makkah
+        </div>
+        <div class="text">
+          100+ Tours
+        </div>
+      </div>
+    </div>
+    <div class="top-deal-card">
+      <div class="img-div">
+        <img src="../../assets/images/top-deals-card-img-2.png" />
+      </div>
+      <div class="discount-div">
+
+        UPTO
+        <span>70%</span>
+        OFF
+      </div>
+      <div class="content-div">
+        <div class="heading">
+          Makkah
+        </div>
+        <div class="text">
+          100+ Tours
+        </div>
+      </div>
+    </div>
+    <div class="top-deal-card">
+      <div class="img-div">
+        <img src="../../assets/images/top-deals-card-img -3.png" />
+      </div>
+      <div class="discount-div">
+
+        UPTO
+        <span>65%</span>
+        OFF
+      </div>
+      <div class="content-div">
+        <div class="heading">
+          Makkah
+        </div>
+        <div class="text">
+          100+ Tours
+        </div>
+      </div>
+    </div>
+    <div class="top-deal-card">
+      <div class="img-div">
+        <img src="../../assets/images/top-deals-card-img.png" />
+      </div>
+      <div class="discount-div">
+
+        UPTO
+        <span>60%</span>
+        OFF
+      </div>
+      <div class="content-div">
+        <div class="heading">
+          Makkah
+        </div>
+        <div class="text">
+          100+ Tours
+        </div>
+      </div>
+    </div>
+    <div class="top-deal-card">
+      <div class="img-div">
+        <img src="../../assets/images/top-deals-card-img-4.png" />
+      </div>
+      <div class="discount-div">
+
+        UPTO
+        <span>65%</span>
+        OFF
+      </div>
+      <div class="content-div">
+        <div class="heading">
+          Makkah
+        </div>
+        <div class="text">
+          100+ Tours
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Special Offers -->
+<section class="special-offers-section" data-aos="fade-up" data-aos-duration="2000">
+  <div class="section-heading-div">
+    <div class="section-heading">
+      Special Offers
+    </div>
+    <div class="section-text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Imperdiet tempus felis vitae sit est quisque.
+    </div>
+  </div>
+
+  <div class="outer-card-div">
+    <div class="special-offers-card">
+      <div class="icon-div">
+        <img src="../../assets/images/top-deals-card-img-4.png" />
+      </div>
+      <div class="content-div">
+        <div class="heading">
+          Last Day is March 13!
+        </div>
+        <div class="text">
+          Up to 50% Discount on
+          Early Booking
+        </div>
+      </div>
+    </div>
+    <div class="special-offers-card">
+      <div class="icon-div">
+        <img src="../../assets/images/top-deals-card-img-2.png" />
+      </div>
+      <div class="content-div">
+        <div class="heading">
+          Last Day is March 13!
+        </div>
+        <div class="text">
+          Up to 50% Discount on
+          Early Booking
+        </div>
+      </div>
+    </div>
+    <div class="special-offers-card">
+      <div class="icon-div">
+        <img src="../../assets/images/top-deals-card-img-4.png" />
+      </div>
+      <div class="content-div">
+        <div class="heading">
+          Last Day is March 13!
+        </div>
+        <div class="text">
+          Up to 50% Discount on
+          Early Booking
+        </div>
+      </div>
+    </div>
+    <div class="special-offers-card">
+      <div class="icon-div">
+        <img src="../../assets/images/top-deals-card-img -3.png" />
+      </div>
+      <div class="content-div">
+        <div class="heading">
+          Last Day is March 13!
+        </div>
+        <div class="text">
+          Up to 50% Discount on
+          Early Booking
+        </div>
+      </div>
+    </div>
+    <div class="special-offers-card">
+      <div class="icon-div">
+        <img src="../../assets/images/top-deals-card-img.png" />
+      </div>
+      <div class="content-div">
+        <div class="heading">
+          Last Day is March 13!
+        </div>
+        <div class="text">
+          Up to 50% Discount on
+          Early Booking
+        </div>
+      </div>
+    </div>
+    <div class="special-offers-card">
+      <div class="icon-div">
+        <img src="../../assets/images/top-deals-card-img-2.png" />
+      </div>
+      <div class="content-div">
+        <div class="heading">
+          Last Day is March 13!
+        </div>
+        <div class="text">
+          Up to 50% Discount on
+          Early Booking
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Us -->
+<section class="about-us-section">
+  <img class="top-left-plane" src="../../assets/images/about-us-plane-left.png" />
+  <div class="parallel-div">
+    <div class="img-div" data-aos="fade-right" data-aos-duration="2000">
+      <img src="../../assets/images/about-section.png" />
+    </div>
+    <div class="content-div" data-aos="fade-left" data-aos-duration="2000">
+      <div class="small-heading">
+        ABOUT US
+      </div>
+      <div class="heading-main">
+        The Best And Most Trusted
+        <span>
+          Booking Service
+        </span>
+      </div>
+      <div class="text">
+        Lorem ipsum dolor sit amet consectetur. Libero sit interdum nulla risus blandit eget lectus. Quis nunc cursus
+        accumsan pellentesque. Netus porta cras commodo nullammagna etiam. Ipsum non libero augue massa. Augue id
+        telluseta. Mi praesent arcu hendrerit aliquam dui porta. Mauris purus.
+      </div>
+      <div class="btn-div">
+        <button>Read More</button>
+      </div>
+
+      <div class="counter-outer">
+        <div class="counter">
+          <div class="count">
+            200+
+          </div>
+          <div class="text">
+            Customer & partners
+          </div>
+        </div>
+
+        <div class="counter">
+          <div class="count">
+            500+
+          </div>
+          <div class="text">
+            Place in the world
+          </div>
+        </div>
+
+        <div class="counter">
+          <div class="count">
+            1k+
+          </div>
+          <div class="text">
+            Success Journey
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Start Planning -->
+<section class="start-planning-section" data-aos="fade-up" data-aos-duration="2000">
+  <img class="left-plane-bg" src="../../assets/images/left-plane-bg.png" />
+  <img class="right-plane-bg" src="../../assets/images/right-plane-bg.png" />
+  <div class="section-heading-div">
+    <div class="section-heading">
+      Start Planning Your Journey
+    </div>
+    <div class="section-text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Imperdiet tempus felis vitae sit est quisque.
+    </div>
+  </div>
+  <div class="outer-tab-div" data-aos="fade-up" data-aos-duration="3000">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="popular-tab" data-bs-toggle="tab" data-bs-target="#popular-tab-pane"
+          type="button" role="tab" aria-controls="popular-tab-pane" aria-selected="true"> Most Popular</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="deals-tab" data-bs-toggle="tab" data-bs-target="#deals-tab-pane" type="button"
+          role="tab" aria-controls="deals-tab-pane" aria-selected="false"> Special Deals</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="price-tab" data-bs-toggle="tab" data-bs-target="#price-tab-pane" type="button"
+          role="tab" aria-controls="price-tab-pane" aria-selected="false"> Best Price</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="recommendation-tab" data-bs-toggle="tab" data-bs-target="#recommendation-tab-pane"
+          type="button" role="tab" aria-controls="recommendation-tab-pane" aria-selected="false">
+          Recommendation</button>
+      </li>
+
+
+    </ul>
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="popular-tab-pane" role="tabpanel" aria-labelledby="popular-tab"
+        tabindex="0">
+        <div class="parallel-card-div">
+          <div class="package-card">
+            <div class="img-div">
+              <img src="../../assets/images/package-1.png" />
+            </div>
+            <div class="content-div">
+              <div class="reviews-div">
+                <img src="../../assets/images/rating.svg" /> 4.8 (8.0K Reviews)
+              </div>
+              <div class="headingg">
+                Package 1
+              </div>
+              <div class="parallell">
+                <div class="inner-location"><img src="../../assets/images/location-icon-small.svg" /> Makkah </div>
+                <div class="inner-location"><img src="../../assets/images/calendar 01.svg" /> 5 Days/4 Night</div>
+              </div>
+              <div class="parallell parallel-2">
+                <div class="price-div">$1500 <span>/per person</span></div>
+                <div class="btn-div">
+                  <button>View More</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="package-card">
+            <div class="img-div">
+              <img src="../../assets/images/package-1.png" />
+            </div>
+            <div class="content-div">
+              <div class="reviews-div">
+                <img src="../../assets/images/rating.svg" /> 4.8 (8.0K Reviews)
+              </div>
+              <div class="headingg">
+                Package 1
+              </div>
+              <div class="parallell">
+                <div class="inner-location"><img src="../../assets/images/location-icon-small.svg" /> Makkah </div>
+                <div class="inner-location"><img src="../../assets/images/calendar 01.svg" /> 5 Days/4 Night</div>
+              </div>
+              <div class="parallell parallel-2">
+                <div class="price-div">$1500 <span>/per person</span></div>
+                <div class="btn-div">
+                  <button>View More</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="package-card">
+            <div class="img-div">
+              <img src="../../assets/images/package-1.png" />
+            </div>
+            <div class="content-div">
+              <div class="reviews-div">
+                <img src="../../assets/images/rating.svg" /> 4.8 (8.0K Reviews)
+              </div>
+              <div class="headingg">
+                Package 1
+              </div>
+              <div class="parallell">
+                <div class="inner-location"><img src="../../assets/images/location-icon-small.svg" /> Makkah </div>
+                <div class="inner-location"><img src="../../assets/images/calendar 01.svg" /> 5 Days/4 Night</div>
+              </div>
+              <div class="parallell parallel-2">
+                <div class="price-div">$1500 <span>/per person</span></div>
+                <div class="btn-div">
+                  <button>View More</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="package-card">
+            <div class="img-div">
+              <img src="../../assets/images/package-1.png" />
+            </div>
+            <div class="content-div">
+              <div class="reviews-div">
+                <img src="../../assets/images/rating.svg" /> 4.8 (8.0K Reviews)
+              </div>
+              <div class="headingg">
+                Package 1
+              </div>
+              <div class="parallell">
+                <div class="inner-location"><img src="../../assets/images/location-icon-small.svg" /> Makkah </div>
+                <div class="inner-location"><img src="../../assets/images/calendar 01.svg" /> 5 Days/4 Night</div>
+              </div>
+              <div class="parallell parallel-2">
+                <div class="price-div">$1500 <span>/per person</span></div>
+                <div class="btn-div">
+                  <button>View More</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="package-card">
+            <div class="img-div">
+              <img src="../../assets/images/package-1.png" />
+            </div>
+            <div class="content-div">
+              <div class="reviews-div">
+                <img src="../../assets/images/rating.svg" /> 4.8 (8.0K Reviews)
+              </div>
+              <div class="headingg">
+                Package 1
+              </div>
+              <div class="parallell">
+                <div class="inner-location"><img src="../../assets/images/location-icon-small.svg" /> Makkah </div>
+                <div class="inner-location"><img src="../../assets/images/calendar 01.svg" /> 5 Days/4 Night</div>
+              </div>
+              <div class="parallell parallel-2">
+                <div class="price-div">$1500 <span>/per person</span></div>
+                <div class="btn-div">
+                  <button>View More</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="package-card">
+            <div class="img-div">
+              <img src="../../assets/images/package-1.png" />
+            </div>
+            <div class="content-div">
+              <div class="reviews-div">
+                <img src="../../assets/images/rating.svg" /> 4.8 (8.0K Reviews)
+              </div>
+              <div class="headingg">
+                Package 1
+              </div>
+              <div class="parallell">
+                <div class="inner-location"><img src="../../assets/images/location-icon-small.svg" /> Makkah </div>
+                <div class="inner-location"><img src="../../assets/images/calendar 01.svg" /> 5 Days/4 Night</div>
+              </div>
+              <div class="parallell parallel-2">
+                <div class="price-div">$1500 <span>/per person</span></div>
+                <div class="btn-div">
+                  <button>View More</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="deals-tab-pane" role="tabpanel" aria-labelledby="renting-tab" tabindex="0">
+        deals
+      </div>
+      <div class="tab-pane fade" id="price-tab-pane" role="tabpanel" aria-labelledby="price-tab" tabindex="0">
+        price
+      </div>
+      <div class="tab-pane fade" id="recommendation-tab-pane" role="tabpanel" aria-labelledby="recommendation-tab"
+        tabindex="0">recommendation
+      </div>
+
+
+    </div>
+  </div>
+
+</section>
+
+
+<!-- Why choose us -->
+<section class="why-choose-us-section" data-aos="fade-right" data-aos-duration="2000">
+  <img class="left-plane-bg" src="../../assets/images/left-plane-bg.png" />
+  <img class="right-plane-bg" src="../../assets/images/right-plane-bg.png" />
+  <div class="parallel-div">
+    <div class="content-div">
+      <div class="heading">
+        Why <span>Choose</span> Us
+      </div>
+      <div class="text">
+        Lorem ipsum dolor sit amet, cons
+        ectetur adipiscing elit.
+      </div>
+      <button>
+        View More
+      </button>
+    </div>
+    <div class="cards-parallel-div">
+      <div class="why-choose-us-card">
+        <div class="icon-div">
+          <img src="../../assets/images/travel-agency.svg" />
+        </div>
+        <div class="heading">
+          Best Travel Agency
+        </div>
+        <div class="text">
+          Travel agencies that provide
+          round trip, one way, and multi
+          trip services.
+        </div>
+      </div>
+      <div class="why-choose-us-card">
+        <div class="icon-div">
+          <img src="../../assets/images/competitive-price.svg" />
+        </div>
+        <div class="heading">
+          Competitive Price
+        </div>
+        <div class="text">
+          The price offered are affordable
+          starting from the ordinary to the
+          exclusive.
+        </div>
+      </div>
+      <div class="why-choose-us-card">
+        <div class="icon-div">
+          <img src="../../assets/images/global-coverage.svg" />
+        </div>
+        <div class="heading">
+          Global Coverage
+        </div>
+        <div class="text">
+          There are many tourist attractions,
+          hotels and interesting entertainment.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Trending Now -->
+<section class="trending-now-section">
+  <img class="right-plane" src="../../assets/images/trending-now-right-plane.png" />
+  <div class="parallel-div">
+    <div class="img-div" data-aos="fade-right" data-aos-duration="2000">
+      <img src="../../assets/images/trending-now.png" alt="">
+      <img class="left-plane" src="../../assets/images/trending-now-left-plane.png" />
+
+    </div>
+    <div class="content-div" data-aos="fade-left" data-aos-duration="2000">
+      <div class="tag">
+        Trending Now
+      </div>
+      <div class="heading">
+        Jabal Arafat
+      </div>
+      <div class="content-parallel-div">
+        <div class="location">
+          <img src="../../assets/images/location-icon.svg" />
+        </div>
+        <div class="ratings-and-reviews">
+          Makkah &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp; <img src="../../assets/images/rating.svg" />
+          &nbsp;&nbsp;
+          4.9 &nbsp; (300 reviews)
+        </div>
+      </div>
+      <div class="text-div">
+        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim
+        velit mollit. Exercitation veniam consequat sunt nostrud amet.
+
+      </div>
+
+      <div class="bottom-parallel">
+        <div class="explore-div">
+          <button>
+            Explore
+          </button>
+        </div>
+        <div class="like-share-div">
+          <button>
+            <img src="../../assets/images/like.svg" />
+          </button>
+          <button>
+            <img src="../../assets/images/share.svg" />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Top Attractions -->
+<section class="top-attraction-section" data-aos="fade-down" data-aos-duration="2000">
+  <img class="left-plane-bg" src="../../assets/images/left-plane-bg.png" />
+  <img class="right-plane-bg" src="../../assets/images/right-plane-bg.png" />
+  <div class="section-heading-div">
+    <div class="section-heading">
+      Top Attractions
+    </div>
+    <div class="section-text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Imperdiet tempus felis vitae sit est quisque.
+    </div>
+  </div>
+
+  <div class="outer-card-div">
+    <div class="attraction-card">
+      <div class="icon-div">
+        <img src="../../assets/images/top-deals-card-img-4.png" />
+      </div>
+      <div class="content-div">
+        <div class="heading">
+          Jabal Arafa
+        </div>
+        <div class="text">
+          Up to 50% Discount on
+          Early Booking
+        </div>
+      </div>
+    </div>
+
+    <div class="attraction-card">
+      <div class="icon-div">
+        <img src="../../assets/images/top-deals-card-img-2.png" />
+      </div>
+      <div class="content-div">
+        <div class="heading">
+          Jabal Arafa
+        </div>
+        <div class="text">
+          Up to 50% Discount on
+          Early Booking
+        </div>
+      </div>
+    </div>
+
+    <div class="attraction-card">
+      <div class="icon-div">
+        <img src="../../assets/images/top-deals-card-img -3.png" />
+      </div>
+      <div class="content-div">
+        <div class="heading">
+          Jabal Arafa
+        </div>
+        <div class="text">
+          Up to 50% Discount on
+          Early Booking
+        </div>
+      </div>
+    </div>
+    <div class="attraction-card">
+      <div class="icon-div">
+        <img src="../../assets/images/top-deals-card-img.png" />
+      </div>
+      <div class="content-div">
+        <div class="heading">
+          Jabal Arafa
+        </div>
+        <div class="text">
+          Up to 50% Discount on
+          Early Booking
+        </div>
+      </div>
+    </div>
+    <div class="attraction-card">
+      <div class="icon-div">
+        <img src="../../assets/images/top-deals-card-img-2.png" />
+      </div>
+      <div class="content-div">
+        <div class="heading">
+          Jabal Arafa
+        </div>
+        <div class="text">
+          Up to 50% Discount on
+          Early Booking
+        </div>
+      </div>
+    </div>
+    <div class="attraction-card">
+      <div class="icon-div">
+        <img src="../../assets/images/top-deals-card-img-4.png" />
+      </div>
+      <div class="content-div">
+        <div class="heading">
+          Jabal Arafa
+        </div>
+        <div class="text">
+          Up to 50% Discount on
+          Early Booking
+        </div>
+      </div>
+    </div>
+    <div class="attraction-card">
+      <div class="icon-div">
+        <img src="../../assets/images/top-deals-card-img -3.png" />
+      </div>
+      <div class="content-div">
+        <div class="heading">
+          Jabal Arafa
+        </div>
+        <div class="text">
+          Up to 50% Discount on
+          Early Booking
+        </div>
+      </div>
+    </div>
+    <div class="attraction-card">
+      <div class="icon-div">
+        <img src="../../assets/images/top-deals-card-img.png" />
+      </div>
+      <div class="content-div">
+        <div class="heading">
+          Jabal Arafa
+        </div>
+        <div class="text">
+          Up to 50% Discount on
+          Early Booking
+        </div>
+      </div>
+    </div>
+    <div class="attraction-card">
+      <div class="icon-div">
+        <img src="../../assets/images/top-deals-card-img-2.png" />
+      </div>
+      <div class="content-div">
+        <div class="heading">
+          Jabal Arafa
+        </div>
+        <div class="text">
+          Up to 50% Discount on
+          Early Booking
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Trusted by travel brands -->
+
+<section class="trusted-brands-section" data-aos="fade-in" data-aos-duration="2000">
+  <img class="left-plane-bg" src="../../assets/images/left-plane-bg.png" />
+  <img class="right-plane-bg" src="../../assets/images/right-plane-bg.png" />
+  <div class="section-heading-div">
+    <div class="section-heading">
+      Trusted by all the largest travel brands
+    </div>
+    <div class="section-text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Imperdiet tempus felis vitae sit est quisque.
+    </div>
+  </div>
+  <div class="outer-card-div">
+    <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+      <div ngxSlickItem>
+        <div class="brand-div">
+          <img src="../../assets/images/brand1.svg.svg" />
+        </div>
+      </div>
+      <div ngxSlickItem>
+        <div class="brand-div">
+          <img src="../../assets/images/brand4.svg.svg" />
+        </div>
+      </div>
+      <div ngxSlickItem>
+        <div class="brand-div">
+          <img src="../../assets/images/brand5.svg.svg" />
+        </div>
+      </div>
+      <div ngxSlickItem>
+        <div class="brand-div">
+          <img src="../../assets/images/brand6.svg.svg" />
+        </div>
+      </div>
+      <div ngxSlickItem>
+        <div class="brand-div">
+          <img src="../../assets/images/brand1.svg.svg" />
+        </div>
+      </div>
+      <div ngxSlickItem>
+        <div class="brand-div">
+          <img src="../../assets/images/brand5.svg.svg" />
+        </div>
+      </div>
+      <div ngxSlickItem>
+        <div class="brand-div">
+          <img src="../../assets/images/brand6.svg.svg" />
+        </div>
+      </div>
+      <div ngxSlickItem>
+        <div class="brand-div">
+          <img src="../../assets/images/brand1.svg.svg" />
+        </div>
+      </div>
+      <div ngxSlickItem>
+        <div class="brand-div">
+          <img src="../../assets/images/brand5.svg.svg" />
+        </div>
+      </div>
+    </ngx-slick-carousel>
+
+  </div>
+</section>
+
+<!-- Customer reviews -->
+
+<section class="customer-reviews-section">
+  <img class="left-plane-bg" src="../../assets/images/left-plane-bg.png" />
+  <img class="right-plane-bg" src="../../assets/images/right-plane-bg.png" />
+  <div class="section-heading-div" data-aos="fade-up" data-aos-duration="2000">
+    <div class="section-heading">
+      Customer Reviews
+    </div>
+  </div>
+  <div class="outer-card-div" data-aos="fade-up" data-aos-duration="2000">
+    <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig2">
+      <div ngxSlickItem>
+        <div class="review-outer-div">
+          <div class="img-div">
+            <img class="customer-img" src="../../assets/images/customer-pic.png" />
+            <img class="quotes" src="../../assets/images/div.testimonials__icon.png" />
+          </div>
+          <div class="heading">
+            Excellent Service!
+          </div>
+          <div class="textt">
+            I had an amazing experience with this company. The service was top-notch, and the staff was incredibly
+            friendly. I highly recommend them!
+          </div>
+          <div class="name">
+            Hosam Hesham
+          </div>
+          <div class="desg">
+            Traveler
+          </div>
+        </div>
+      </div>
+      <div ngxSlickItem>
+        <div class="review-outer-div">
+          <div class="img-div">
+            <img class="customer-img" src="../../assets/images/customer-pic.png" />
+            <img class="quotes" src="../../assets/images/div.testimonials__icon.png" />
+          </div>
+          <div class="heading">
+            Excellent Service!
+          </div>
+          <div class="textt">
+            I had an amazing experience with this company. The service was top-notch, and the staff was incredibly
+            friendly. I highly recommend them!
+          </div>
+          <div class="name">
+            Hosam Hesham
+          </div>
+          <div class="desg">
+            Traveler
+          </div>
+        </div>
+      </div>
+      <div ngxSlickItem>
+        <div class="review-outer-div">
+          <div class="img-div">
+            <img class="customer-img" src="../../assets/images/customer-pic.png" />
+            <img class="quotes" src="../../assets/images/div.testimonials__icon.png" />
+          </div>
+          <div class="heading">
+            Excellent Service!
+          </div>
+          <div class="textt">
+            I had an amazing experience with this company. The service was top-notch, and the staff was incredibly
+            friendly. I highly recommend them!
+          </div>
+          <div class="name">
+            Hosam Hesham
+          </div>
+          <div class="desg">
+            Traveler
+          </div>
+        </div>
+      </div>
+      <div ngxSlickItem>
+        <div class="review-outer-div">
+          <div class="img-div">
+            <img class="customer-img" src="../../assets/images/customer-pic.png" />
+            <img class="quotes" src="../../assets/images/div.testimonials__icon.png" />
+          </div>
+          <div class="heading">
+            Excellent Service!
+          </div>
+          <div class="textt">
+            I had an amazing experience with this company. The service was top-notch, and the staff was incredibly
+            friendly. I highly recommend them!
+          </div>
+          <div class="name">
+            Hosam Hesham
+          </div>
+          <div class="desg">
+            Traveler
+          </div>
+        </div>
+      </div>
+
+    </ngx-slick-carousel>
+
+  </div>
+
+  <div class="parallel-reviews-div" data-aos="fade-up" data-aos-duration="2000">
+    <div class="review-cards">
+      <div class="text">
+        Wow, what a fun vacation with
+        Oelinken, guided by professional
+        people
+      </div>
+      <div class="parallel-bottom">
+        <div class="img-div">
+          <img src="../../assets/images/customer-pic.png" alt="">
+        </div>
+        <div class="name-rating">
+          <div class="name-div">
+            Hosam Hesham
+          </div>
+          <div class="rating">
+            <img src="../../assets/images/rating.svg" />
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="review-cards">
+      <div class="text">
+        Wow, what a fun vacation with
+        Oelinken, guided by professional
+        people
+      </div>
+      <div class="parallel-bottom">
+        <div class="img-div">
+          <img src="../../assets/images/customer-pic.png" alt="">
+        </div>
+        <div class="name-rating">
+          <div class="name-div">
+            Hosam Hesham
+          </div>
+          <div class="rating">
+            <img src="../../assets/images/rating.svg" />
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="review-cards">
+      <div class="text">
+        Wow, what a fun vacation with
+        Oelinken, guided by professional
+        people
+      </div>
+      <div class="parallel-bottom">
+        <div class="img-div">
+          <img src="../../assets/images/customer-pic.png" alt="">
+        </div>
+        <div class="name-rating">
+          <div class="name-div">
+            Hosam Hesham
+          </div>
+          <div class="rating">
+            <img src="../../assets/images/rating.svg" />
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="review-cards">
+      <div class="text">
+        Wow, what a fun vacation with
+        Oelinken, guided by professional
+        people
+      </div>
+      <div class="parallel-bottom">
+        <div class="img-div">
+          <img src="../../assets/images/customer-pic.png" alt="">
+        </div>
+        <div class="name-rating">
+          <div class="name-div">
+            Hosam Hesham
+          </div>
+          <div class="rating">
+            <img src="../../assets/images/rating.svg" />
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

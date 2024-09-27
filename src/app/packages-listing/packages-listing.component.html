@@ -1,0 +1,528 @@
+<section class="travel-agencies-banner-section">
+  <div class="breadcrumb-section" data-aos="fade-down" data-aos-offset="600">
+    Home > Packages
+  </div>
+  <div class="content-desc" data-aos="fade-down" data-aos-offset="600">
+    <div>
+      <div class="heading">
+        Explore all things to do.
+      </div>
+
+    </div>
+    <div class="sort-by-div">
+      Sort by: <select>
+        <option>Featured</option>
+        <option>Latest</option>
+        <option>Oldest</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="outer-layout-div">
+    <div class="sidebar-div" data-aos="fade-in">
+      <div class="when-travel-header">
+        <div class="text">
+          When are you traveling?
+        </div>
+        <div class="date-range-div">
+          <mat-form-field>
+            <mat-label>Check Available Dates</mat-label>
+            <mat-date-range-input [rangePicker]="picker">
+              <input matStartDate placeholder="Start date">
+              <input matEndDate placeholder="End date">
+            </mat-date-range-input>
+            <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-date-range-picker #picker></mat-date-range-picker>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="content-div">
+        <div class="heading-div">
+          Tour Type
+        </div>
+        <div class="tour-type-checkbox-outer">
+          <div *ngFor="let checkbox of tourtypes; let i = index" class="checkbox-inner">
+            <input type="checkbox" [(ngModel)]="checkbox.checked" [id]="'checkbox' + i" />
+            <label [for]="'checkbox' + i" [ngClass]="{'checked-label': checkbox.checked}">{{ checkbox.label }}</label>
+          </div>
+        </div>
+        <hr />
+
+        <div class="heading-div">
+          Travel Agency
+        </div>
+        <div class="tour-type-checkbox-outer">
+          <div *ngFor="let agency of travelAgencies; let m = index" class="checkbox-inner">
+            <input type="radio" [(ngModel)]="selectedAgency" [value]="agency.value" [id]="'agency' + m"
+              name="agencies" />
+            <label [for]="'agency' + m" [ngClass]="{'checked-label': selectedAgency === agency.value}">
+              {{ agency.label }}
+            </label>
+          </div>
+
+        </div>
+        <hr />
+
+        <div class="heading-div">
+          Filter Price
+        </div>
+        <div class="tour-type-checkbox-outer">
+          <div *ngFor="let price of prices; let l = index" class="checkbox-inner">
+            <input type="radio" [(ngModel)]="selectedPrice" [value]="price.value" [id]="'price' + l" name="prices" />
+            <label [for]="'price' + l" [ngClass]="{'checked-label': selectedPrice === price.value}">
+              {{ price.label }}
+            </label>
+          </div>
+
+        </div>
+        <hr />
+
+        <div class="heading-div">
+          Duration
+        </div>
+        <div class="tour-type-checkbox-outer">
+          <div *ngFor="let duration of durations; let n = index" class="checkbox-inner">
+            <input type="radio" [(ngModel)]="selectedDuration" [value]="duration.value" [id]="'duration' + n"
+              name="durations" />
+            <label [for]="'duration' + n" [ngClass]="{'checked-label': selectedDuration === duration.value}">
+              {{ duration.label }}
+            </label>
+          </div>
+
+        </div>
+        <hr />
+
+
+        <div class="heading-div">
+          Language Spoken
+        </div>
+        <div class="tour-type-checkbox-outer">
+          <div *ngFor="let language of languages; let j = index" class="checkbox-inner">
+            <input type="checkbox" [(ngModel)]="language.checked" [id]="'language' + j" />
+            <label [for]="'language' + j" [ngClass]="{'checked-label': language.checked}">{{ language.label }}</label>
+          </div>
+        </div>
+        <hr />
+        <div class="heading-div">
+          Rating
+        </div>
+        <div class="tour-type-checkbox-outer">
+          <div *ngFor="let rating of ratings; let k = index"
+            class="checkbox-inner d-flex align-content-center justify-content-between">
+            <div class="d-flex align-content-center gap-2">
+              <input type="checkbox" [(ngModel)]="rating.checked" [id]="'rating' + k" />
+              <label [for]="'rating' + k" [ngClass]="{'checked-label': rating.checked}">
+                <img [src]="rating.imgSrc" alt="Rating Image">
+
+              </label>
+            </div>
+            <div>
+              <label>({{ rating.count }})</label>
+            </div>
+          </div>
+        </div>
+        <hr />
+
+        <div class="heading-div">
+          Specials
+        </div>
+        <div class="tour-type-checkbox-outer">
+
+          <div *ngFor="let discount of discounts; let o = index" class="checkbox-inner">
+            <input type="radio" [(ngModel)]="selectedDiscount" [value]="discount.value" [id]="'discount' + o"
+              name="discounts" />
+            <label [for]="'discount' + o" [ngClass]="{'checked-label': selectedDiscount === discount.value}">
+              {{ discount.label }}
+            </label>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="main-content-div" data-aos="fade-in">
+      <div class="outer-card-div">
+        <div class="package-card">
+          <div class="img-div">
+            <img src="../../assets/images/image.png" />
+            <img class="trip-guide" src="../../assets/images/trip-guide-1.svg" alt="">
+          </div>
+          <div class="content-div">
+            <div class="location">
+              <img src="../../assets/images/location-icon-green.svg" /> Makkah
+            </div>
+            <div class="headingg">
+              Lorem ipsum dolor sit amet
+            </div>
+            <div class="rating"><img src="../../assets/images/Star 2.svg" /> 4.8 (243) </div>
+            <hr />
+            <div class="parallell">
+              <div class="text-div">4 Days </div>
+              <div class="price-div">From <span>$1500 </span></div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="package-card">
+          <div class="img-div">
+            <img src="../../assets/images/image (1).png" />
+            <img class="trip-guide" src="../../assets/images/trip-guide-1.svg" alt="">
+          </div>
+          <div class="content-div">
+            <div class="location">
+              <img src="../../assets/images/location-icon-green.svg" /> Makkah
+            </div>
+            <div class="headingg">
+              Lorem ipsum dolor sit amet
+            </div>
+            <div class="rating"><img src="../../assets/images/Star 2.svg" /> 4.8 (243) </div>
+            <hr />
+            <div class="parallell">
+              <div class="text-div">4 Days </div>
+              <div class="price-div">From <span>$1500 </span></div>
+
+            </div>
+          </div>
+        </div>
+        <div class="package-card">
+          <div class="img-div">
+            <img src="../../assets/images/image (2).png" />
+            <img class="trip-guide" src="../../assets/images/trip-guide-1.svg" alt="">
+          </div>
+          <div class="content-div">
+            <div class="location">
+              <img src="../../assets/images/location-icon-green.svg" /> Makkah
+            </div>
+            <div class="headingg">
+              Lorem ipsum dolor sit amet
+            </div>
+            <div class="rating"><img src="../../assets/images/Star 2.svg" /> 4.8 (243) </div>
+            <hr />
+            <div class="parallell">
+              <div class="text-div">4 Days </div>
+              <div class="price-div">From <span>$1500 </span></div>
+
+            </div>
+          </div>
+        </div>
+        <div class="package-card">
+          <div class="img-div">
+            <img src="../../assets/images/image (3).png" />
+            <img class="trip-guide" src="../../assets/images/trip-guide-1.svg" alt="">
+          </div>
+          <div class="content-div">
+            <div class="location">
+              <img src="../../assets/images/location-icon-green.svg" /> Makkah
+            </div>
+            <div class="headingg">
+              Lorem ipsum dolor sit amet
+            </div>
+            <div class="rating"><img src="../../assets/images/Star 2.svg" /> 4.8 (243) </div>
+            <hr />
+            <div class="parallell">
+              <div class="text-div">4 Days </div>
+              <div class="price-div">From <span>$1500 </span></div>
+
+            </div>
+          </div>
+        </div>
+        <div class="package-card">
+          <div class="img-div">
+            <img src="../../assets/images/image (4).png" />
+            <img class="trip-guide" src="../../assets/images/trip-guide-1.svg" alt="">
+          </div>
+          <div class="content-div">
+            <div class="location">
+              <img src="../../assets/images/location-icon-green.svg" /> Makkah
+            </div>
+            <div class="headingg">
+              Lorem ipsum dolor sit amet
+            </div>
+            <div class="rating"><img src="../../assets/images/Star 2.svg" /> 4.8 (243) </div>
+            <hr />
+            <div class="parallell">
+              <div class="text-div">4 Days </div>
+              <div class="price-div">From <span>$1500 </span></div>
+
+            </div>
+          </div>
+        </div>
+        <div class="package-card">
+          <div class="img-div">
+            <img src="../../assets/images/image (5).png" />
+            <img class="trip-guide" src="../../assets/images/trip-guide-1.svg" alt="">
+          </div>
+          <div class="content-div">
+            <div class="location">
+              <img src="../../assets/images/location-icon-green.svg" /> Makkah
+            </div>
+            <div class="headingg">
+              Lorem ipsum dolor sit amet
+            </div>
+            <div class="rating"><img src="../../assets/images/Star 2.svg" /> 4.8 (243) </div>
+            <hr />
+            <div class="parallell">
+              <div class="text-div">4 Days </div>
+              <div class="price-div">From <span>$1500 </span></div>
+
+            </div>
+          </div>
+        </div>
+        <div class="package-card">
+          <div class="img-div">
+            <img src="../../assets/images/image (6).png" />
+            <img class="trip-guide" src="../../assets/images/trip-guide-1.svg" alt="">
+          </div>
+          <div class="content-div">
+            <div class="location">
+              <img src="../../assets/images/location-icon-green.svg" /> Makkah
+            </div>
+            <div class="headingg">
+              Lorem ipsum dolor sit amet
+            </div>
+            <div class="rating"><img src="../../assets/images/Star 2.svg" /> 4.8 (243) </div>
+            <hr />
+            <div class="parallell">
+              <div class="text-div">4 Days </div>
+              <div class="price-div">From <span>$1500 </span></div>
+
+            </div>
+          </div>
+        </div>
+        <div class="package-card">
+          <div class="img-div">
+            <img src="../../assets/images/image (7).png" />
+            <img class="trip-guide" src="../../assets/images/trip-guide-1.svg" alt="">
+          </div>
+          <div class="content-div">
+            <div class="location">
+              <img src="../../assets/images/location-icon-green.svg" /> Makkah
+            </div>
+            <div class="headingg">
+              Lorem ipsum dolor sit amet
+            </div>
+            <div class="rating"><img src="../../assets/images/Star 2.svg" /> 4.8 (243) </div>
+            <hr />
+            <div class="parallell">
+              <div class="text-div">4 Days </div>
+              <div class="price-div">From <span>$1500 </span></div>
+
+            </div>
+          </div>
+        </div>
+        <div class="package-card">
+          <div class="img-div">
+            <img src="../../assets/images/image (8).png" />
+            <img class="trip-guide" src="../../assets/images/trip-guide-1.svg" alt="">
+          </div>
+          <div class="content-div">
+            <div class="location">
+              <img src="../../assets/images/location-icon-green.svg" /> Makkah
+            </div>
+            <div class="headingg">
+              Lorem ipsum dolor sit amet
+            </div>
+            <div class="rating"><img src="../../assets/images/Star 2.svg" /> 4.8 (243) </div>
+            <hr />
+            <div class="parallell">
+              <div class="text-div">4 Days </div>
+              <div class="price-div">From <span>$1500 </span></div>
+
+            </div>
+          </div>
+        </div>
+        <div class="package-card">
+          <div class="img-div">
+            <img src="../../assets/images/image (9).png" />
+            <img class="trip-guide" src="../../assets/images/trip-guide-1.svg" alt="">
+          </div>
+          <div class="content-div">
+            <div class="location">
+              <img src="../../assets/images/location-icon-green.svg" /> Makkah
+            </div>
+            <div class="headingg">
+              Lorem ipsum dolor sit amet
+            </div>
+            <div class="rating"><img src="../../assets/images/Star 2.svg" /> 4.8 (243) </div>
+            <hr />
+            <div class="parallell">
+              <div class="text-div">4 Days </div>
+              <div class="price-div">From <span>$1500 </span></div>
+
+            </div>
+          </div>
+        </div>
+        <div class="package-card">
+          <div class="img-div">
+            <img src="../../assets/images/image (10).png" />
+            <img class="trip-guide" src="../../assets/images/trip-guide-1.svg" alt="">
+          </div>
+          <div class="content-div">
+            <div class="location">
+              <img src="../../assets/images/location-icon-green.svg" /> Makkah
+            </div>
+            <div class="headingg">
+              Lorem ipsum dolor sit amet
+            </div>
+            <div class="rating"><img src="../../assets/images/Star 2.svg" /> 4.8 (243) </div>
+            <hr />
+            <div class="parallell">
+              <div class="text-div">4 Days </div>
+              <div class="price-div">From <span>$1500 </span></div>
+
+            </div>
+          </div>
+        </div>
+        <div class="package-card">
+          <div class="img-div">
+            <img src="../../assets/images/image (11).png" />
+            <img class="trip-guide" src="../../assets/images/trip-guide-1.svg" alt="">
+          </div>
+          <div class="content-div">
+            <div class="location">
+              <img src="../../assets/images/location-icon-green.svg" /> Makkah
+            </div>
+            <div class="headingg">
+              Lorem ipsum dolor sit amet
+            </div>
+            <div class="rating"><img src="../../assets/images/Star 2.svg" /> 4.8 (243) </div>
+            <hr />
+            <div class="parallell">
+              <div class="text-div">4 Days </div>
+              <div class="price-div">From <span>$1500 </span></div>
+
+            </div>
+          </div>
+        </div>
+        <div class="package-card">
+          <div class="img-div">
+            <img src="../../assets/images/image (12).png" />
+            <img class="trip-guide" src="../../assets/images/trip-guide-1.svg" alt="">
+          </div>
+          <div class="content-div">
+            <div class="location">
+              <img src="../../assets/images/location-icon-green.svg" /> Makkah
+            </div>
+            <div class="headingg">
+              Lorem ipsum dolor sit amet
+            </div>
+            <div class="rating"><img src="../../assets/images/Star 2.svg" /> 4.8 (243) </div>
+            <hr />
+            <div class="parallell">
+              <div class="text-div">4 Days </div>
+              <div class="price-div">From <span>$1500 </span></div>
+
+            </div>
+          </div>
+        </div>
+        <div class="package-card">
+          <div class="img-div">
+            <img src="../../assets/images/image (13).png" />
+            <img class="trip-guide" src="../../assets/images/trip-guide-1.svg" alt="">
+          </div>
+          <div class="content-div">
+            <div class="location">
+              <img src="../../assets/images/location-icon-green.svg" /> Makkah
+            </div>
+            <div class="headingg">
+              Lorem ipsum dolor sit amet
+            </div>
+            <div class="rating"><img src="../../assets/images/Star 2.svg" /> 4.8 (243) </div>
+            <hr />
+            <div class="parallell">
+              <div class="text-div">4 Days </div>
+              <div class="price-div">From <span>$1500 </span></div>
+
+            </div>
+          </div>
+        </div>
+        <div class="package-card">
+          <div class="img-div">
+            <img src="../../assets/images/image (14).png" />
+            <img class="trip-guide" src="../../assets/images/trip-guide-1.svg" alt="">
+          </div>
+          <div class="content-div">
+            <div class="location">
+              <img src="../../assets/images/location-icon-green.svg" /> Makkah
+            </div>
+            <div class="headingg">
+              Lorem ipsum dolor sit amet
+            </div>
+            <div class="rating"><img src="../../assets/images/Star 2.svg" /> 4.8 (243) </div>
+            <hr />
+            <div class="parallell">
+              <div class="text-div">4 Days </div>
+              <div class="price-div">From <span>$1500 </span></div>
+
+            </div>
+          </div>
+        </div>
+        <div class="package-card">
+          <div class="img-div">
+            <img src="../../assets/images/image (15).png" />
+            <img class="trip-guide" src="../../assets/images/trip-guide-1.svg" alt="">
+          </div>
+          <div class="content-div">
+            <div class="location">
+              <img src="../../assets/images/location-icon-green.svg" /> Makkah
+            </div>
+            <div class="headingg">
+              Lorem ipsum dolor sit amet
+            </div>
+            <div class="rating"><img src="../../assets/images/Star 2.svg" /> 4.8 (243) </div>
+            <hr />
+            <div class="parallell">
+              <div class="text-div">4 Days </div>
+              <div class="price-div">From <span>$1500 </span></div>
+
+            </div>
+          </div>
+        </div>
+        <div class="package-card">
+          <div class="img-div">
+            <img src="../../assets/images/image (16).png" />
+            <img class="trip-guide" src="../../assets/images/trip-guide-1.svg" alt="">
+          </div>
+          <div class="content-div">
+            <div class="location">
+              <img src="../../assets/images/location-icon-green.svg" /> Makkah
+            </div>
+            <div class="headingg">
+              Lorem ipsum dolor sit amet
+            </div>
+            <div class="rating"><img src="../../assets/images/Star 2.svg" /> 4.8 (243) </div>
+            <hr />
+            <div class="parallell">
+              <div class="text-div">4 Days </div>
+              <div class="price-div">From <span>$1500 </span></div>
+
+            </div>
+          </div>
+        </div>
+        <div class="package-card">
+          <div class="img-div">
+            <img src="../../assets/images/image (17).png" />
+            <img class="trip-guide" src="../../assets/images/trip-guide-1.svg" alt="">
+          </div>
+          <div class="content-div">
+            <div class="location">
+              <img src="../../assets/images/location-icon-green.svg" /> Makkah
+            </div>
+            <div class="headingg">
+              Lorem ipsum dolor sit amet
+            </div>
+            <div class="rating"><img src="../../assets/images/Star 2.svg" /> 4.8 (243) </div>
+            <hr />
+            <div class="parallell">
+              <div class="text-div">4 Days </div>
+              <div class="price-div">From <span>$1500 </span></div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>

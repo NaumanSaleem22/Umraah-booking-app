@@ -1,0 +1,243 @@
+.travel-agencies-banner-section {
+  padding: 20px 0px;
+  max-width: 1290px;
+  margin: 129px auto 0;
+  @media (max-width: 1024px) {
+    margin-top: 90px;
+  }
+  .breadcrumb-section {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26.25px;
+    color: #05073c;
+    margin-bottom: 8px;
+    padding: 0 16px;
+  }
+  .content-desc {
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
+      margin-bottom: 30px;
+    }
+    .heading {
+      font-family: Volkhov;
+      font-size: 35px;
+      font-weight: 700;
+      line-height: 52.5px;
+      position: relative;
+      color: #0f1416;
+      margin-bottom: 20px;
+      @media (max-width: 1024px) {
+        font-size: 28px;
+        line-height: 38px;
+      }
+      &::after {
+        content: "";
+        background-color: #0d7434;
+        position: absolute;
+        width: 100px;
+        height: 7px;
+        border-radius: 7px;
+        bottom: -8px;
+        left: 0;
+      }
+    }
+    .sort-by-div {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 28.13px;
+      color: #05073c;
+      select {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 28.13px;
+        border: none;
+        outline: none;
+      }
+    }
+  }
+
+  .outer-layout-div {
+    max-width: 1279px;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    @media (max-width: 1340px) {
+      padding: 0 16px;
+      gap: 32px;
+    }
+    @media (max-width: 768px) {
+      padding: 0 6px;
+      gap: 8px;
+    }
+    .sidebar-div {
+      max-width: 300px;
+      width: 100%;
+      border: 1px solid #e7e6e6;
+      border-radius: 12px;
+      overflow: hidden;
+      @media (max-width: 1024px) {
+        max-width: 220px;
+      }
+      .when-travel-header {
+        background-color: #ffca01;
+        padding: 30px;
+        width: 100%;
+        @media (max-width: 1024px) {
+          padding: 24px 9px;
+        }
+        .text {
+          font-size: 14.77px;
+          font-weight: 500;
+          line-height: 28.13px;
+          color: #0f1416;
+          margin-bottom: 10px;
+          @media (max-width: 1024px) {
+            font-size: 16px;
+            line-height: 18px;
+          }
+        }
+        .date-range-div {
+          width: 100%;
+
+          .mat-mdc-form-field {
+            max-width: 240px;
+            @media (max-width: 1024px) {
+              max-width: 195px;
+              label {
+                font-size: 10px !important;
+              }
+
+              mat-hint {
+                font-size: 10px !important;
+              }
+            }
+            @media (max-width: 768px) {
+              max-width: 145px;
+            }
+          }
+          .mat-datepicker-toggle-default-icon {
+            color: #0d7434 !important;
+          }
+        }
+      }
+      .content-div {
+        padding: 30px;
+        @media (max-width: 1024px) {
+          padding: 24px 16px;
+        }
+        .heading-div {
+          font-size: 18px;
+          font-weight: 600;
+          line-height: 18px;
+          color: #05073c;
+          margin-bottom: 25px;
+          @media (max-width: 575px) {
+            font-size: 16px;
+            margin-bottom: 18px;
+            line-height: 20px;
+          }
+        }
+        .tour-type-checkbox-outer {
+          .checkbox-inner {
+            margin-bottom: 15px;
+            display: flex;
+            gap: 11px;
+            align-items: center;
+            label {
+              font-size: 14px;
+              font-weight: 500;
+              line-height: 14px;
+              @media (max-width: 575px) {
+                font-size: 12px;
+              }
+              img {
+                width: 100%;
+              }
+            }
+          }
+        }
+        .checked-label {
+          color: #0d7434;
+        }
+      }
+    }
+    .main-content-div {
+      max-width: 952px;
+      width: 100%;
+      .outer-card-div {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 32px;
+        flex-wrap: wrap;
+        @media (max-width: 1340px) {
+          gap: 16px;
+        }
+        @media (max-width: 768px) {
+          gap: 4px;
+        }
+        .agency-card {
+          width: 100%;
+          max-width: 295px;
+          border-radius: 12px;
+          position: relative;
+          @media (max-width: 1340px) {
+            width: 31%;
+            max-width: unset;
+          }
+          @media (max-width: 768px) {
+            width: 46%;
+          }
+          @media (max-width: 575px) {
+            width: 100%;
+          }
+          img {
+            width: 100%;
+            height: 100%;
+          }
+          .content-div {
+            position: absolute;
+            bottom: 18px;
+            right: 0;
+            left: 0;
+            margin: 0 auto;
+            text-align: center;
+            .heading {
+              font-size: 18px;
+              font-weight: 600;
+              line-height: 27px;
+              color: white;
+            }
+            .text {
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 26.25px;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+::ng-deep.mat-mdc-text-field-wrapper {
+  @media (max-width: 768px) {
+    padding: 0 4px !important;
+    label {
+      font-size: 14px !important;
+    }
+  }
+}
+::ng-deep.mat-mdc-form-field-infix {
+  @media (max-width: 768px) {
+    padding-top: 2px !important;
+  }
+}

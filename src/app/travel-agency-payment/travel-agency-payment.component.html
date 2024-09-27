@@ -1,0 +1,225 @@
+<section class="travel-agency-payment-section">
+  <div class="parallel-div">
+    <ng-container *ngIf="isLoggedIn">
+      <div class="left-div">
+        <div class="login-register">
+          <div class="icon-div">
+            <img src="../../assets/images/Ellipse 54.svg" alt="">
+          </div>
+          <div class="content-div">
+            <div class="heading">Log In or register to plan your journey</div>
+            <div class="content">Book faster and easier with Quick Pick</div>
+            <button class="login-register-btn">Log In or register </button>
+          </div>
+        </div>
+
+        <div class="contact-information-div">
+          <div class="heading">Enter contact information</div>
+          <div class="parallel-input-div">
+            <div class="input-div">
+              <input type="text" placeholder="First Name">
+            </div>
+            <div class="input-div">
+              <input type="text" placeholder="Last Name">
+            </div>
+          </div>
+          <div class="parallel-input-div">
+            <div class="input-div">
+              <input type="text" placeholder="Phone">
+            </div>
+            <div class="input-div">
+              <input type="tel" placeholder="Mobile Phone">
+            </div>
+            <div class="input-div">
+              <input type="email" placeholder="Email">
+            </div>
+          </div>
+        </div>
+        <div class="agree-text">
+          By clicking 'Agree & continue' you are agreeing to our <a href="#">Terms and Conditions</a> , <a href="#">
+            Privacy Policy</a> ,
+          and to receive
+          booking-related SMS texts. Standard messaging rates may apply.
+        </div>
+        <button class="agree-btn">
+          Agree & Continue
+        </button>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="!isLoggedIn">
+      <div class="left-div">
+        <div class="signed-in-div">
+          Signed in as: <a href="#">hosam.hesham&#64;gmail.com</a>
+        </div>
+        <div class="payment-img-div">
+          <img src="../../assets/images/payment.png" alt="">
+        </div>
+        <div class="features-outer">
+          <div class="textt">
+            <img src="../../assets/images/tick-iconn.svg" />
+            We use secure transmission
+          </div>
+          <div class="textt">
+            <img src="../../assets/images/tick-iconn.svg" />
+            We protect your personal information
+          </div>
+        </div>
+        <div class="contact-information-div">
+          <div class="heading">Card information</div>
+          <div class="parallel-input-div">
+            <div class="input-div">
+              <input type="text" placeholder="First Name">
+            </div>
+            <div class="input-div">
+              <input type="text" placeholder="Last Name">
+            </div>
+          </div>
+          <div class="parallel-input-div">
+            <div class="input-div">
+              <input type="text" placeholder="Card Number">
+            </div>
+
+          </div>
+          <div class="parallel-input-div">
+            <div class="input-div">
+              <input type="text" placeholder="Expiration MM/YY">
+            </div>
+            <div class="input-div">
+              <input type="tel" placeholder="Security Code">
+            </div>
+          </div>
+
+          <div class="input-div">
+            <input type="checkbox" placeholder="Security Code"> <label>Save this card for future use</label>
+          </div>
+        </div>
+
+        <div class="contact-information-div">
+          <div class="heading">Billing Address</div>
+          <div class="parallel-input-div">
+            <div class="input-div">
+              <select>
+                <option>Country</option>
+                <option>Oman</option>
+                <option>Egypt</option>
+                <option>Syria</option>
+              </select>
+            </div>
+            <div class="input-div">
+              <select>
+                <option>City</option>
+                <option>Oman</option>
+                <option>Egypt</option>
+                <option>Syria</option>
+              </select>
+            </div>
+            <div class="input-div">
+              <select>
+                <option>State</option>
+                <option>Oman</option>
+                <option>Egypt</option>
+                <option>Syria</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="parallel-input-div">
+            <div class="input-div">
+              <input type="text" placeholder="Street">
+            </div>
+            <div class="input-div">
+              <input type="tel" placeholder="Zip Code">
+            </div>
+          </div>
+
+          <div class="input-div">
+            <input type="checkbox" placeholder="Security Code"> <label>Save address card for future use</label>
+          </div>
+        </div>
+        <div class="agree-text">
+          By clicking 'Agree & continue' you are agreeing to our <a href="#">Terms and Conditions</a> , <a href="#">
+            Privacy Policy</a> ,
+          and to receive
+          booking-related SMS texts. Standard messaging rates may apply.
+        </div>
+        <button class="agree-btn">
+          Agree & Continue
+        </button>
+      </div>
+    </ng-container>
+    <div class="right-div">
+      <div class="tour-name">
+        <div class="icon-div">
+          <img src="../../assets/images/tour-image-1.png" alt="">
+        </div>
+        <div class="content-div">
+          <div class="name">Maecenas tristique.</div>
+          <div class="location">
+            <img src="../../assets/images/location-icon-green.svg" /> Makkah
+          </div>
+          <div class="rating">
+            <img src="../../assets/images/rating.svg" />4.8 (243)
+          </div>
+        </div>
+      </div>
+
+      <div class="time-div-outer">
+        <div class="inner-div">
+          <div class="icon-div"><img src="../../assets/images/ic_baseline-flight-takeoff.svg" /></div>
+          <div class="content-div">
+            <div class="label-div">From</div>
+            <div class="text-div">February 05 ~ March 14</div>
+          </div>
+        </div>
+        <div class="inner-div">
+          <div class="icon-div"><img src="../../assets/images/ic_baseline-flight-takeoff.svg" /></div>
+          <div class="content-div">
+            <div class="label-div">To</div>
+            <div class="text-div">February 05 ~ March 14</div>
+          </div>
+        </div>
+        <hr class="m-0" />
+        <div class="inner-div">
+          <div class="icon-div"><img src="../../assets/images/ic_baseline-flight-takeoff.svg" /></div>
+          <div class="content-div">
+            <div class="label-div">Time</div>
+            <div class="text-div"><input type="time" placeholder="Choose Time"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="guest-outer">
+        <div class="guest-heading">Guest</div>
+        <div class="desc">
+          1 Adult, 1 Youth, 1 Child
+        </div>
+      </div>
+
+      <div class="parallel-div">
+        <div class="heading-div">
+          Total
+        </div>
+        <div class="text-div">$50.00</div>
+      </div>
+      <div class="parallel-div">
+        <div class="heading-div">
+          Service Fee
+        </div>
+        <div class="text-div">$30.00</div>
+      </div>
+      <div class="parallel-div">
+        <div class="heading-div">
+          Tax
+        </div>
+        <div class="text-div"> 5%</div>
+      </div>
+      <hr />
+      <div class="parallel-div">
+        <div class="total-div">
+          Total Amount
+        </div>
+        <div class="price-div"> $530.00</div>
+      </div>
+    </div>
+  </div>
+</section>

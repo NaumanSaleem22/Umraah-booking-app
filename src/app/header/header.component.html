@@ -1,0 +1,44 @@
+<nav class="custom-navbar navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+      aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <a class="navbar-brand" href="#"><img src="../../assets/images/header-logo.svg" /></a>
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/travel-agencies" (click)="closeNavbar()">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/details" (click)="closeNavbar()">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/packages-listing" (click)="closeNavbar()">Packages</a>
+        </li>
+
+      </ul>
+      <div class="right-most-div">
+        <div class="parallel-left">
+          <button class="search-div">
+            <img src="../../assets/images/Search Icon.svg" />
+          </button>
+          <button class="cart-div">
+            <img src="../../assets/images/Cart Icon.svg" /> Cart (0)
+          </button>
+        </div>
+        <div class="parallel-right">
+          <div class="register-div">
+            <button>
+              Register
+            </button>
+          </div>
+          <div class="signin-div">
+            <button>Sign In</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</nav>
